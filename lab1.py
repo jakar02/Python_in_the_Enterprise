@@ -23,5 +23,20 @@
 #
 #Good luck.
 
+import random
 
-def 
+def new_tilt_correction_function():
+    tilt_correction = random.gauss(0, 2*rate_of_correction)
+    return tilt_correction
+
+
+current_orientaion = 0 #starting position
+while True:
+    print("current orientation = ", current_orientaion)
+    applied_tilt_correction = new_tilt_correction_function(current_orientaion)
+    print("applied tilt correction = ", applied_tilt_correction)
+
+    print("Do you want to continue? (press 'n' if not): ")
+    do_you_want_to_continue = input()
+    if do_you_want_to_continue == "n" or do_you_want_to_continue == "N":
+        break
